@@ -1,5 +1,6 @@
 angular.module('djApp', [
 	'firebase',
+	'FirebaseService',
 	'ngRoute',
 	'appRoutes',
 	'MainCtrl',

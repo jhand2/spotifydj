@@ -21,4 +21,14 @@ angular.module('MainCtrl', []).controller('MainCtrl', function($scope, $http, $l
 		Browse.currArtist = artist;
 		$location.path("/#artist/" + artist.id);
 	}
+
+	$scope.login = function() {
+		ref.authAnonymously(function(error, authData) {
+			if (error) {
+				console.log("Login Failed!", error);
+			} else {
+				console.log("Authenticated successfully: ", authData);
+			}
+		});
+	}
 });
