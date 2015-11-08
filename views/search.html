@@ -8,7 +8,17 @@
 	
 		<button ng-click="getArtists()" type="button" class="btn btn-primary">Search</button>
 	</form>
-	<div ng-repeat="artist in artists">
-		<a ng-click='selectArtist(artist)'>{{artist.name}}</a>		
-	</div>
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="artist in artists">
+				<td ng-click='selectArtist(artist)'>{{artist.name}}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>

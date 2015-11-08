@@ -1,7 +1,7 @@
 angular.module('browseService', []).factory('Browse', function() {
 	return {
-		currArtist: {},
-		currAlbum: {},
-		currSong: {}
+		currArtist: null,
+		currAlbum: null,
+		currSong: null
 	}
 });

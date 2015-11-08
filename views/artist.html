@@ -1,9 +1,8 @@
-<div ng-controller="MainCtrl" ng-init="load()">
-	<p>{{currArtist.name}}</p>
+<div ng-controller="ArtistCtrl" ng-init="loadArtist()">
 	<ul class="rig colums-3">
-		<li class="thumbContainer" ng-repeat="artist in artists">
-			<img ng-if="artist.images.length > 0" ng-src="{{artist.images[0].url}}" />
-			<img ng-if="artist.images.length <= 0" ng-src="http://sheethost.com/assets/img/score-placeholder.png" />
+		<li class="thumbContainer" ng-repeat="album in albums" ng-click="selectAlbum(album)">
+			<img ng-if="album.images.length > 0" ng-src="{{album.images[0].url}}" />
+			<img ng-if="album.images.length <= 0" ng-src="http://sheethost.com/assets/img/score-placeholder.png" />
 		</li>
 	</ul>
 </div>

@@ -3,5 +3,8 @@ angular.module('djApp', [
 	'ngRoute',
 	'appRoutes',
 	'MainCtrl',
+	'ArtistCtrl',
+	'UtilService',
+	'AlbumCtrl',
 	'browseService']
 );
