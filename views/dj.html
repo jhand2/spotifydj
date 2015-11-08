@@ -1,0 +1,14 @@
+<div class="container" ng-controller="MainCtrl">
+	<form>
+		<legend>Search For An Artist</legend>
+	
+		<div class="form-group">
+			<input ng-submit="search()" ng-model="searchString" type="text" class="form-control" id="" placeholder="Input field">
+		</div>
+	
+		<button ng-click="getArtists()" type="button" class="btn btn-primary">Search</button>
+	</form>
+	<div ng-repeat="artist in artists">
+		<a ng-click='selectArtist(artist)'>{{artist.name}}</a>		
+	</div>
+</div>
