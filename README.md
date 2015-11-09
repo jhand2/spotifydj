@@ -30,3 +30,11 @@ Did you encounter any problems in this challenge we should warn students about i
 
 	Basically just be careful of getting too ambitious. Although I think it was a good learning
 	experience to figure out to do when faced with time/technical limitations
+
+Notes:
+
+Sometimes the songs take a second to start playing. But I promise it'll start :)
+
+The UI is kinda basic cause I speant most of my time learning cool angular stuff
+like services/modules/dependencies and also tring to indegrate firebase.
+Soooo make up for UI points in how awesome and modular this code is?
