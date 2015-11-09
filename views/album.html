@@ -1,14 +1,14 @@
 <div ng-controller="AlbumCtrl" ng-init="loadAlbum()">
-
+	<legend>{{currAlbum.name}} (click to play a song)</legend>
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th></th>
+				<th>By {{currAlbum.artists[0].name}}</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr ng-repeat="track in tracks">
-				<td ng-click='playSong(track.preview_url)'>{{track.name}}</td>
+				<td ng-click='playSong(track)'>{{track.name}}</td>
 			</tr>
 		</tbody>
 	</table>

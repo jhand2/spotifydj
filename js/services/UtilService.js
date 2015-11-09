@@ -13,6 +13,7 @@ angular.module('UtilService', []).service('Util', [function() {
 				urlString += next;
 			}
 			return urlString;
-		}
+		},
+		authData: null,
 	}
 }]);

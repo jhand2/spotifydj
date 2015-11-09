@@ -1,3 +1,9 @@
+/* All styles with .rig and .grid-nav classes are courtesy of
+
+http://alijafarian.com/responsive-image-grids-using-css/ 
+
+(with some custoizations made) */
+
 ul.rig {
 	list-style: none;
 	font-size: 0px;
@@ -35,8 +41,6 @@ ul.rig li p {
 	padding-top: 0.25em;
 	padding-left: 0.25em;
 	display: inline;
-	/*line-height: 1.5em;*/
-	/*color: #999;*/
 }
 
 ul.rig.columns-2 li {
@@ -107,4 +111,23 @@ button::-moz-focus-inner {
 
 div a {
 	cursor: pointer;
+}
+
+td {
+	cursor: pointer;
+}
+
+.num {
+	width:1%;
+	white-space:nowrap;
+}
+
+.song-name {
+	font-weight: bold;
+	font-size: 1.3em;
+	color:black;
+}
+
+.song {
+	color:gray;
 }

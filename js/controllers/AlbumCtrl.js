@@ -1,4 +1,4 @@
-angular.module('AlbumCtrl', []).controller('AlbumCtrl', function($scope, $http, $location, Browse) {
+angular.module('AlbumCtrl', []).controller('AlbumCtrl', function($scope, $http, $location, Browse, Firebase) {
 	var baseUrl = 'https://api.spotify.com';
 
 	$scope.currAlbum = null;
@@ -22,12 +22,14 @@ angular.module('AlbumCtrl', []).controller('AlbumCtrl', function($scope, $http, 
 	}
 
 	$scope.playSong = function(song) {
+		var songUrl = song.preview_url;
+		Firebase.addSong(song, new Date().toJSON());
 		if($scope.currentSong == song) {
 			$scope.audioObject.pause()
 			$scope.currentSong = false
 		} else {
 			if($scope.audioObject.pause != undefined) $scope.audioObject.pause();
-			$scope.audioObject = new Audio(song);
+			$scope.audioObject = new Audio(songUrl);
 			$scope.audioObject.play();
 			$scope.currentSong = song;
 		}
@@ -40,10 +42,6 @@ angular.module('AlbumCtrl', []).controller('AlbumCtrl', function($scope, $http, 
 	}
 
 	$scope.$on("$destroy", function() {
-        $scope.audioObject.pause();
+        if($scope.audioObject.pause != undefined) $scope.audioObject.pause();
     });
-
- //    $scope.$on('$locationChangeStart', function(event) {
-	//     $scope.audioObject.pause();
-	// });
 });
